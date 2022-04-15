@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="Welcome.css">
+    <title>POLL ADDA</title>
+</head>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js"></script>
+
+
+<body>
+    <div>
+        <h1 class="hello_message" id="user"></h1>
+        <div id="alpha"></div>
+        <button class="open-button" onclick="openForm()">Create Poll</button>
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
+        <button class="poll_button" type="submit">My Polls</button>
+    </div>
+
+
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>New Poll</h1>
+
+
+            <input type="text" placeholder="Enter poll Name" name="name" required>
+            <label for="name"><b>Poll Name</b></label><br>
+
+            <input type="radio" placeholder="Enter option1" name="option1" required>
+            <label for="option1"><b>option1</b></label><br>
+
+            <input type="radio" placeholder="Enter option2" name="option2" required>
+            <label for="option2"><b>option2</b></label><br>
+
+            <button type="submit" class="btn">Create</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAu2-rT52XSH-yUCekYKLzjl2MZFs8aYvE",
+            authDomain: "polling-website-5c24a.firebaseapp.com",
+            projectId: "polling-website-5c24a",
+            databaseURL: "https://polling-website-5c24a-default-rtdb.firebaseio.com",
+            storageBucket: "polling-website-5c24a.appspot.com",
+            messagingSenderId: "845758130238",
+            appId: "1:845758130238:web:d8b257c7d483e9ce78496f",
+            measurementId: "G-BJJK1D81VV"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="Welcome.js"></script>
+
+</body>
+
+</html>
