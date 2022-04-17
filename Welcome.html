@@ -23,24 +23,32 @@
         <div id="alpha"></div>
         <button class="open-button" onclick="openForm()">Create Poll</button>
         <button class="btn btn-danger" onclick="logout()">Logout</button>
-        <button class="poll_button" type="submit">My Polls</button>
+        <button class="poll_button" id="my_polls" onclick="myPolls()">My Polls</button>
     </div>
 
+    <ul id="list">
 
+    </ul>
 
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form id="create" class="form-container">
             <h1>New Poll</h1>
 
 
-            <input type="text" placeholder="Enter poll Name" name="name" required>
+            <input type="text" placeholder="Enter poll Name" name="name" id="pollname" required>
             <label for="name"><b>Poll Name</b></label><br>
 
-            <input type="radio" placeholder="Enter option1" name="option1" required>
+            <input type="radio text" placeholder="Enter option1" name="option1" id="pollop1" required>
             <label for="option1"><b>option1</b></label><br>
 
-            <input type="radio" placeholder="Enter option2" name="option2" required>
+            <input type="radio text" placeholder="Enter option2" name="option2" id="pollop2" required>
             <label for="option2"><b>option2</b></label><br>
+
+            <input type="radio text" placeholder="Enter option3" name="option3" id="pollop3" required>
+            <label for="option3"><b>option3</b></label><br>
+
+            <input type="radio text" placeholder="Enter option4" name="option4" id="pollop4" required>
+            <label for="option4"><b>option4</b></label><br>
 
             <button type="submit" class="btn">Create</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
